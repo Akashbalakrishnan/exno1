@@ -28,60 +28,60 @@ df=pd.read_csv("/content/SAMPLEIDS.csv")
 df
 
 ```
-![D1](https://github.com/user-attachments/assets/2788ce7b-594f-4de1-929d-6da1bb66feb7)
+![image](https://github.com/user-attachments/assets/be44f804-7c82-4a93-afa5-582d4250d745)
 
 ```
 df.isnull().sum()
 ```
-![D2](https://github.com/user-attachments/assets/bada091f-fbc8-46f7-a70b-f146d81a9e8c)
+![image](https://github.com/user-attachments/assets/3bff74bb-5901-478f-8684-9b385e47c784)
 
 ```
 df.isnull().any()
 ```
-![D3](https://github.com/user-attachments/assets/1db72edd-9eb9-47f3-b9f7-12edb813ac88)
+![image](https://github.com/user-attachments/assets/1b5560d1-a783-4c21-be91-85e2e6d29249)
 
 ```
 df.dropna()
 ```
-![D4](https://github.com/user-attachments/assets/88fe9d9a-3a4f-466e-972c-182ac3626054)
+![image](https://github.com/user-attachments/assets/836fbeba-0078-4e45-9c16-703e2b5e8394)
 
 ```
 df.fillna(0)
 ```
-![D5](https://github.com/user-attachments/assets/3b12b148-508c-4e47-b5a7-ef1130e4b66b)
+![image](https://github.com/user-attachments/assets/f4a465f2-00af-48db-ae9d-c35a2faf5642)
 
 ```
 df.fillna(method = "ffill")
 ```
-![D6](https://github.com/user-attachments/assets/e17fce7e-8054-4b11-bb04-0e17b2b3016c)
+![image](https://github.com/user-attachments/assets/19acf483-a3c0-4b42-99e1-d32354d80009)
 
 ```
 df.fillna(method = 'bfill')
 ```
-![D7](https://github.com/user-attachments/assets/48c82c46-c62e-4556-96a0-1f7498b74abf)
+![image](https://github.com/user-attachments/assets/1a47f45e-ee36-42fc-b07c-e3c6696e1698)
 
 ```
 df_dropped = df.dropna()
 df_dropped
 ```
-![D8](https://github.com/user-attachments/assets/4f762cf5-31c0-4104-b65b-e3ace87836ec)
+![image](https://github.com/user-attachments/assets/b652d24a-1d82-419b-936e-af90bae7913e)
 
 ```
 df.fillna({'GENDER':'MALE','NAME':'SRI','ADDRESS':'POONAMALEE','M1':98,'M2':87,'M3':76,'M4':92,'TOTAL':305,'AVG':89.999999})
 ```
-![D9](https://github.com/user-attachments/assets/dc6d79f9-5324-458e-9b8b-4e2a739e6bc6)
+![image](https://github.com/user-attachments/assets/27eb1007-0cc9-47da-90a5-e99f2831c6a6)
 
 ## IQR(Inter Quartile Range)
 ```
 ir=pd.read_csv('iris.csv')
 ir
 ```
-![I1](https://github.com/user-attachments/assets/5b465543-1470-496c-b7fb-d57895bf73e5)
+![image](https://github.com/user-attachments/assets/c162b71a-1b85-4e46-a145-78c744573190)
 
 ```
 ir.describe()
 ```
-![I2](https://github.com/user-attachments/assets/728264b3-1d5f-4db5-aad2-301db04fb5fd)
+![image](https://github.com/user-attachments/assets/a8b6baff-5da2-4a81-959c-8bc688a6dc26)
 
 ```
 import seaborn as sns
@@ -90,7 +90,7 @@ sns.boxplot(x='sepal_width',data=ir)
 plt.show()
 
 ```
-![I3](https://github.com/user-attachments/assets/de0ad3b4-58dd-4a56-b3c2-c480f387b0ad)
+![image](https://github.com/user-attachments/assets/0b10748d-c60e-4b1a-b5a2-ef5cf76f4afb)
 
 ```
  c1=ir.sepal_width.quantile(0.25)
@@ -98,24 +98,24 @@ plt.show()
  iq=c3-c1
  print(c3)
 ```
-![I4](https://github.com/user-attachments/assets/6dc14587-f63c-4114-bfb8-d915c05fc46c)
+![image](https://github.com/user-attachments/assets/5eefc5a4-4171-4ac2-af05-5e0ea8d3d8ff)
 
 ```
 rid=ir[((ir.sepal_width<(c1-1.5*iq))|(ir.sepal_width>(c3+1.5*iq)))]
 rid['sepal_width']
 ```
-![I5](https://github.com/user-attachments/assets/e6e3599e-9b3f-40cc-b8fa-b4074959220c)
+![image](https://github.com/user-attachments/assets/23d550cc-559d-4c98-862c-7803584d116b)
 
 ```
 delid=ir[~((ir.sepal_width<(c1-1.5*iq))|(ir.sepal_width>(c3+1.5*iq)))]
 delid
 ```
-![I6](https://github.com/user-attachments/assets/44c34a59-6696-41f1-bb72-78cd3539fa4e)
+![image](https://github.com/user-attachments/assets/b64fdcc3-808c-49bc-912f-b3dda38ada12)
 
 ```
 sns.boxplot(x='sepal_width',data=delid)
 ```
-![I7](https://github.com/user-attachments/assets/1390de71-84a9-4f50-83b1-4047983e3bda)
+![image](https://github.com/user-attachments/assets/8c3f9b78-49ff-4762-966d-08469f492f62)
 
 ## Z - Score
 ```
@@ -126,7 +126,7 @@ import scipy.stats as stats
 dataset=pd.read_csv("heights.csv")
 dataset
 ```
-![Z1](https://github.com/user-attachments/assets/8a7b2811-79b4-4f9e-a666-d0a5293a4c2a)
+![image](https://github.com/user-attachments/assets/1057cb26-c51d-4f0f-af15-6f843466d941)
 
 ```
 df = pd.read_csv("heights.csv")
@@ -136,38 +136,37 @@ q3 = df['height'].quantile(0.75)
 iqr = q3-q1
 iqr
 ```
-![Z2](https://github.com/user-attachments/assets/efa9ada9-f9b0-4a41-b2c7-c2bf3199c23f)
+![image](https://github.com/user-attachments/assets/b952eda4-58c7-4483-a037-2f79d23fc7fa)
 
 ```
 low = q1- 1.5*iqr
 low
 ```
-![output](./Outputs/Z3.png)
-![Z3](https://github.com/user-attachments/assets/3d5800fc-b6d2-4b3c-95a0-cc273f47ae00)
+![image](https://github.com/user-attachments/assets/2846b1c3-b249-4ca3-8ecb-f4855aaaeb8f)
 
 ```
 high = q3 + 1.5*iqr
 high
 ```
-![Z4](https://github.com/user-attachments/assets/cb1e7051-13f5-44ce-ad7f-4845cd542584)
+![image](https://github.com/user-attachments/assets/5be1bfa3-7fb7-4d8d-8550-dfb66ace0109)
 
 ```
 df1 = df[((df['height'] >=low)& (df['height'] <=high))]
 df1
 ```
-![Z5](https://github.com/user-attachments/assets/763e56df-e506-47ec-bf87-4ddf1a3a4766)
+![image](https://github.com/user-attachments/assets/0efb9e7b-bd23-4e9f-88d8-7d51358e47e3)
 
 ```
 z = np.abs(stats.zscore(df['height']))
 z
 ```
-![Z6](https://github.com/user-attachments/assets/545fe736-2fa8-4219-8056-7cfb05f16c15)
+![image](https://github.com/user-attachments/assets/bb8c6a93-79f4-4c6d-9ab5-3cd8b3c336f4)
 
 ```
 df1 = df[z<3]
 df1
 ```
-![Z7](https://github.com/user-attachments/assets/2e2c162c-9af4-4ac9-a573-3f2dbd88004c)
+![image](https://github.com/user-attachments/assets/b6da7bf0-939f-4a4a-a04b-8c80d0b423d6)
 
 # Result
 Thus we have cleaned the data and removed the outliers by detection using IQR and Z-score method.
